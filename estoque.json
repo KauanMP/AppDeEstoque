@@ -1,0 +1,96 @@
+{
+    "clientes": [
+        {
+            "id": 1,
+            "nome": "Gallo",
+            "email": "gallo@gallo.com",
+            "senha": "123456"
+        },
+        {
+            "id": 2,
+            "nome": "Indiano",
+            "email": "indiano@val.com",
+            "senha": "654321"
+        },
+        {
+            "id": 3,
+            "nome": "Carneiro",
+            "email": "carneiro@carneiro.com",
+            "senha": "123456789"
+        }
+    ],
+    "pedidos": [
+        {
+            "id": 1,
+            "id_cliente": 1,
+            "data_pedido": "2023-03-31",
+            "total": 124.24
+        },
+        {
+            "id": 2,
+            "id_cliente": 3,
+            "data_pedido": "2023-03-15",
+            "total": 324.24
+        }
+    ],
+    "itens_pedidos": [
+        {
+            "id_produto": 1,
+            "id_pedido": 1,
+            "preco_unitario": 12.12,
+            "quantidade": 2,
+            "preco_total": 24.24
+        },
+        {
+            "id_produto": 3,
+            "id_pedido": 1,
+            "preco_unitario": 50.00,
+            "quantidade": 2,
+            "preco_total": 100.00
+        },
+        {
+            "id_produto": 1,
+            "id_pedido": 2,
+            "preco_unitario": 12.12,
+            "quantidade": 2,
+            "preco_total": 24.24
+        },
+        {
+            "id_produto": 3,
+            "id_pedido": 2,
+            "preco_unitario": 50.00,
+            "quantidade": 2,
+            "preco_total": 100.00
+        },
+        {
+            "id_produto": 2,
+            "id_pedido": 2,
+            "preco_unitario": 200.00,
+            "quantidade": 1,
+            "preco_total": 200.00
+        }
+    ],
+    "produtos": [
+        {
+            "id": 1,
+            "titulo": "Monster",
+            "descricao": "Energético Monster 473ml",
+            "preco": 12.12,
+            "nome_imagem": "monster.jpg"
+        },
+        {
+            "id": 2,
+            "titulo": "Picanha",
+            "descricao": "Picanha embalada à vácuo",
+            "preco": 50.00,
+            "nome_imagem": "picanha.jpg"
+        },
+        {
+            "id": 3,
+            "titulo": "Chopp",
+            "descricao": "Chopp de 15 litros",
+            "preco": 200.00,
+            "nome_imagem": "chopp.jpg"
+        }
+    ]
+}
