@@ -1,3 +1,4 @@
+import { Cliente } from '../models/Cliente.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,11 +11,27 @@ export class ClientesService {
 
   constructor( private http: HttpClient) { }
 
-  create(){}
-  getAll(){}
-  getOne(){}
-  update(){}
-  delete(){}
+  create( cliente: Cliente){
+    return this.http.post(this.url, cliente);
+  }
+
+  getAll(){
+    return this.http.get(this.url)
+  }
+
+  getOne(id: number){
+    return this.http.get(`${this.url}/${id}`);
+  }
+
+  update(cliente: Cliente){
+    return this.http.put(`${this.url}/${cliente.id}`, cliente);
+  }
+
+  delete(id: number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
   login(){}
+
   logout(){}
 }

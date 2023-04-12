@@ -2,7 +2,9 @@
 
 2) Criar o serviço (service) (ionic generate service pasta/nome)
 
-3)importar o HttpClientModule no app.module.ts (app.component.ts)
+3) importar o HttpClientModule no app.module.ts (app.component.ts)
+
+3.1) Se for Standalone importar o providerHttpClient no min.ts no providers
 
 4) Injetar o HttpClient no construtor do Serviço (todos)
 
