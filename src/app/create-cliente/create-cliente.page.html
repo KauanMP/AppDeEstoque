@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>createCliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-input
+        type="text"
+        fill="outline"
+        label="Name"
+        LabelPlacement="floating"
+        helperText="Digite o nome"
+        [(ngModel)]="name"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+        type="email"
+        fill="outline"
+        label="E-mail"
+        LabelPlacement="floating"
+        helperText="Digite o E-Mail"
+        [(ngModel)]="email"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+        type="password"
+        fill="outline"
+        label="Senha"
+        LabelPlacement="floating"
+        helperText="Digite a senha"
+        [(ngModel)]="password"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+        type="password"
+        fill="outline"
+        label="Confirme a senha"
+        LabelPlacement="floating"
+        helperText="Confirme a senha"
+        [(ngModel)]="confirmPassword"
+      ></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-button expand="block"> Salvar </ion-button>
+  </ion-list>
+</ion-content>
