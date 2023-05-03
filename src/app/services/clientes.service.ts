@@ -13,8 +13,11 @@ export class ClientesService {
 
   constructor( private http: HttpClient, private alertctrl: AlertController) { }
 
-  create( cliente: Cliente){
-    return this.http.post(this.url, cliente);
+  create( cliente: Cliente):Observable<Cliente> {
+    return this.http.get<Cliente[]>(this.url).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
   }
 
   getAll(): Observable<Cliente[]> {
