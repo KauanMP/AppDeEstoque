@@ -7,11 +7,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item *ngFor="let cliente of listaClientes">
+  <ion-item>
     <ion-label>
-      <h1>{{cliente.nome}}</h1>
-      <a href="mailto:{{cliente.email}}">{{cliente.email}}</a>
     </ion-label>
+    <ion-button color="warning" (click)="alterarCliente(cliente.id)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
   </ion-item>
 
   <ion-Button routerLink="/create-cliente">
