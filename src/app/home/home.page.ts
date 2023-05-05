@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { Cliente } from '../models/Cliente.model';
 import { ClientesService } from '../services/clientes.service';
@@ -10,23 +10,20 @@ import { ClientesService } from '../services/clientes.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule, RouterLink],
 })
-
 export class HomePage {
-
   listaClientes: Cliente[] = [];
 
   constructor(private clienteService: ClientesService, private router: Router) {
+  }
+
+  ionViewWillEnter(){
     this.buscarCliente();
   }
 
-  ionViewWillEnter() {
-    
-  }
-
   buscarCliente() {
-    this.clienteService.getAll().subscribe(dados => {
+    this.clienteService.getAll().subscribe((dados) => {
       this.listaClientes = dados;
     });
   }
@@ -35,7 +32,7 @@ export class HomePage {
     this.router.navigateByUrl(`/alterar-cliente/${id}`);
   }
 
-  exluirCliente(id: number) {
+  excluirCliente(id: number) {
 
   }
 }
