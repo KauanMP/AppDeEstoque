@@ -16,11 +16,20 @@ export const routes: Routes = [
   },
   {
     path: 'create-cliente',
-    loadComponent: () => import('./create-cliente/create-cliente.page').then( m => m.CreateClientePage)
+    loadComponent: () => import('./clientePages/create-cliente/create-cliente.page').then( m => m.CreateClientePage)
   },
   {
     path: 'alterar-cliente/:id',
-    loadComponent: () => import('./alterar-cliente/alterar-cliente.page').then( m => m.AlterarClientePage)
+    loadComponent: () => import('./clientePages/alterar-cliente/alterar-cliente.page').then( m => m.AlterarClientePage)
   },
+  {
+    path: 'create-produto',
+    loadComponent: () => import('./produtoPages/create-produto/create-produto.page').then( m => m.CreateProdutoPage)
+  },
+  {
+    path: 'alterar-produto',
+    loadComponent: () => import('./produtoPages/alterar-produto/alterar-produto.page').then( m => m.AlterarProdutoPage)
+  },
+
 
 ];

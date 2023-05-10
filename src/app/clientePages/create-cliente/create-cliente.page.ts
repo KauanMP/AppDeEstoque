@@ -1,5 +1,5 @@
-import { Cliente } from './../models/Cliente.model';
-import { ClientesService } from './../services/clientes.service';
+import { Cliente } from './../../models/Cliente.model';
+import { ClientesService } from './../../services/clientes.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

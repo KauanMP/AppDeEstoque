@@ -15,8 +15,7 @@ import { ClientesService } from '../services/clientes.service';
 export class HomePage {
   listaClientes: Cliente[] = [];
 
-  constructor(private clienteService: ClientesService, private router: Router) {
-  }
+  constructor(private clienteService: ClientesService, private router: Router) {  }
 
   ionViewWillEnter(){
     this.buscarCliente();

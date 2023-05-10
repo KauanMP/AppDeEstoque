@@ -1,10 +1,10 @@
-import { ClientesService } from './../services/clientes.service';
+import { ClientesService } from './../../services/clientes.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Cliente } from '../models/Cliente.model';
+import { Cliente } from './../../models/Cliente.model';
 
 @Component({
   selector: 'app-alterar-cliente',

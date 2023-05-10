@@ -8,7 +8,16 @@
   <ion-item *ngFor="let produto of listaProdutos">
     <ion-label>
       <h1>{{produto.titulo}}</h1>
-      <p>{{produto.preco}}</p>
     </ion-label>
+    <ion-button color="warning" (click)="alterarProduto(produto.id!)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="excluirProduto(produto.id!)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
   </ion-item>
+
+  <ion-Button routerLink="/create-produto">
+    Adicionar Produto
+  </ion-Button>
 </ion-content>
