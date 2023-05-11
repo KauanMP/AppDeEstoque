@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Clientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let cliente of listaClientes">
+    <ion-label>
+      <h1>{{cliente.nome}}</h1>
+    </ion-label>
+    <ion-button color="warning" (click)="alterarCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="excluirCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-Button routerLink="/create-cliente">
+    Adicionar Cliente
+  </ion-Button>
+</ion-content>

@@ -43,13 +43,13 @@ export class AlterarProdutoPage implements OnInit {
       this.produtosService.create(produto).subscribe(dados => {
         alert('Produto alterado com sucesso: ' + dados.id)
         // navegação vem aqui
-        this.router.navigateByUrl('/produtos');
+        this.router.navigateByUrl('/home-produtos');
         // this.route.navigate([/home]);
       });
 
       // Nunca colocar a navegação fora... vai voltar sem saber a resposta
     } else {
-      alert("aaaaaa.")
+      alert("alguma coisa ai deu errado.")
     }
   }
 

@@ -29,12 +29,12 @@ export class CreateProdutoPage {
       this.produtosService.create(produto).subscribe(dados => {
         alert('Produto inserido com sucesso: ' + dados.id)
         // navegação vem aqui
-        this.route.navigateByUrl('/home');
+        this.route.navigateByUrl('/home-produtos');
         // this.route.navigate([/home]);
       });
       // Nunca colocar a navegação fora... vai voltar sem saber a resposta
     } else {
-      alert("Senhas não conferem.")
+      alert("Preencha todos os campos")
     }
   }
 

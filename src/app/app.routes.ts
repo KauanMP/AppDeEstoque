@@ -11,10 +11,6 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'produtos',
-    loadComponent: () => import('./produtos/produtos.page').then( m => m.ProdutosPage)
-  },
-  {
     path: 'create-cliente',
     loadComponent: () => import('./clientePages/create-cliente/create-cliente.page').then( m => m.CreateClientePage)
   },
@@ -30,6 +26,16 @@ export const routes: Routes = [
     path: 'alterar-produto',
     loadComponent: () => import('./produtoPages/alterar-produto/alterar-produto.page').then( m => m.AlterarProdutoPage)
   },
+  {
+    path: 'home-cliente',
+    loadComponent: () => import('./clientePages/home-cliente/home-cliente.page').then( m => m.HomeClientePage)
+  },
+  {
+    path: 'home-produtos',
+    loadComponent: () => import('./produtoPages/home-produtos/home-produtos.page').then( m => m.HomeProdutosPage)
+  },
+
+
 
 
 ];

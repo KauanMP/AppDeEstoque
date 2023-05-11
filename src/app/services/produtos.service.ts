@@ -48,7 +48,7 @@ export class ProdutosService {
 
   exibirErro(erro: any): Observable<any>{
     const titulo = 'Erro na conexão!'
-    const msg = `Verifique sua conexão <br> ou <br> Informe esse erro ao suporte: ${erro.status}`;
+    const msg = `Verifique sua conexão ou Informe esse erro ao suporte: ${erro.status}`;
     this.presentAlert(titulo, msg)
     console.log(erro);
     return EMPTY;

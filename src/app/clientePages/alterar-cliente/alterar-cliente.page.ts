@@ -42,7 +42,7 @@ export class AlterarClientePage implements OnInit {
         email: this.email,
         senha: this.password
       }
-      this.clientesService.create(cliente).subscribe(dados => {
+      this.clientesService.update(cliente).subscribe(dados => {
         alert('Cliente alterado com sucesso: ' + dados.id)
         // navegação vem aqui
         this.router.navigateByUrl('/home');
