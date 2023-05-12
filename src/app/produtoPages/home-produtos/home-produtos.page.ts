@@ -23,13 +23,13 @@ export class HomeProdutosPage {
   }
 
   buscarProdutos() {
-    this.produtosService.getAll().subscribe(dados => {
+    this.produtosService.getAll().subscribe((dados) => {
       this.listaProdutos = dados;
     });
   }
 
   alterarProduto(id: number) {
-    this.router.navigateByUrl(`/alterar-produto/${id}`);
+    this.router.navigateByUrl(`./alterar-produto/${id}`);
   }
 
   excluirProduto(id: number) {

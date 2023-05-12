@@ -16,9 +16,9 @@ import { ClientesService } from 'src/app/services/clientes.service';
 export class HomeClientePage {
   listaClientes: Cliente[] = [];
 
-  constructor(private clienteService: ClientesService, private router: Router) {  }
+  constructor(private clienteService: ClientesService, private router: Router) { }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.buscarCliente();
   }
 
@@ -33,6 +33,8 @@ export class HomeClientePage {
   }
 
   excluirCliente(id: number) {
-
+    this.clienteService.delete(id).subscribe(() => {
+      this.listaClientes = this.listaClientes.filter(p => p.id !== id);
+    });
   }
 }

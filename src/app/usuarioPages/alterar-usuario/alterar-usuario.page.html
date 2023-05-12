@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alterar-usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-input
+        type="email"
+        fill="outline"
+        label="E-mail"
+        LabelPlacement="floating"
+        helperText="Digite o E-Mail"
+        [(ngModel)]="email"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+        type="text"
+        fill="outline"
+        label="Nome"
+        LabelPlacement="floating"
+        helperText="Digite o nome"
+        [(ngModel)]="firstName"
+      ></ion-input>
+    </ion-item>
+    <br />
+    <ion-item>
+      <ion-input
+        type="text"
+        fill="outline"
+        label="Sobrenome"
+        LabelPlacement="floating"
+        helperText="Digite o sobrenome"
+        [(ngModel)]="lastName"
+      ></ion-input>
+    </ion-item>
+    <br />
+
+    <ion-button expand="block" (click)="salvar()"> Salvar </ion-button>
+  </ion-list>
+</ion-content>
